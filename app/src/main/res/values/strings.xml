@@ -9,4 +9,12 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="myDore">دوره های من </string>
+    <string name="Wallet">کیف پول </string>
+    <string name="UserProfile">پروفایل کاربری </string>
+    <string name="chat">تالار گفتمان </string>
+    <string name="amoozeshi">دوره های آموزشی </string>
+    <string name="moreShow"> نمایش بیشتر > </string>
+
 </resources>

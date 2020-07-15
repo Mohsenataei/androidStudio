@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="HeaderBackground">#2B2D35</color>
+    <color name="TextViewColors">#1E1F25</color>
+
 </resources>
