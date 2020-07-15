@@ -10,6 +10,9 @@ public class StoryItem {
 //        this.storyStatus = storyStatus;
     }
 
+    public StoryItem() {
+    }
+
     public int getImage() {
         return image;
     }

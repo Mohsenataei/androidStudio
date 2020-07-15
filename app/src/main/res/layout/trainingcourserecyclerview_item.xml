@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <LinearLayout
+       android:layoutDirection="rtl"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <ImageView
+           android:id="@+id/CorseImage"
+           android:src="@drawable/profile1"
+           android:scaleType="fitXY"
+           android:layout_width="200dp"
+           android:layout_height="200dp"
+           android:layout_marginRight="25dp"
+           app:layout_constraintDimensionRatio="1:1.25"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           />
+       <TextView
+           android:id="@+id/txtName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="20dp"
+           android:layout_marginRight="25dp"
+           android:fontFamily="@font/bol"
+           android:text="بیولوژی باور ها و قدرت نهفته"
+           />
+       <TextView
+           android:id="@+id/txtPrice"
+           android:fontFamily="@font/medium"
+           android:layout_marginRight="25dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="240,000 تومان"
+           android:textSize="23dp"
+           />
+   </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

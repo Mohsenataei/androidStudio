@@ -42,7 +42,7 @@ public class StoryItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
 
-    class ViewHolderStoryItem extends RecyclerView.ViewHolder {
+    static class ViewHolderStoryItem extends RecyclerView.ViewHolder {
 
         ImageView profileImage;
 

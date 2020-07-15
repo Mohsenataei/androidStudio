@@ -81,7 +81,7 @@
                 android:id="@+id/chat"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_marginEnd="28dp"
+                android:layout_marginEnd="45dp"
                 android:background="@drawable/ripple_border"
                 android:clickable="true"
                 android:drawableTop="@drawable/ic_speech_bubble"
@@ -150,13 +150,13 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:gravity="right"
         android:layoutDirection="rtl"
         android:orientation="horizontal"
-        android:weightSum="12"
+        android:weightSum="10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
@@ -167,52 +167,54 @@
             android:id="@+id/doreyeAmoozeshi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:drawableRight="@drawable/ic_book"
-            android:drawablePadding="4dp"
-            android:paddingStart="10dp"
-            android:paddingRight="10dp"
+            android:layout_weight="3"
+            android:drawableStart="@drawable/ic_book"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/medium"
+            android:paddingStart="0dp"
+            android:paddingEnd="4dp"
             android:text="@string/amoozeshi"
             android:textColor="@color/TextViewColors"
-            android:textSize="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/lineView"
             android:layout_width="0dp"
-            android:layout_height="2dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="5dp"
-            android:paddingRight="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="13dp"
             android:layout_weight="5"
-            android:background="@drawable/line_view"
-            app:layout_constraintEnd_toStartOf="@+id/doreyeAmoozeshi"
-            app:layout_constraintLeft_toLeftOf="@id/doreyeAmoozeshi"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:background="#C7C7C7" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_weight="2.5"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="2"
+            android:fontFamily="@font/bol"
             android:text="@string/moreShow"
             android:textColor="@color/TextViewColors"
-            android:textSize="12dp"
-            app:layout_constraintEnd_toStartOf="@+id/lineView"
-            app:layout_constraintLeft_toLeftOf="@id/lineView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_weight=".5"
-            android:layout_width="0dp"
-            android:layout_height="2dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/line_view"/>
-
+            android:textSize="12sp" />
 
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/CourseRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,9 +33,14 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager2;
     private Handler sliderHandler = new Handler();
+    //***********************************************//
     private RecyclerView StoryRecyclerView;
     private StoryItemAdapter adapter;
-    private ArrayList<StoryItem> items = new ArrayList<>();
+    private ArrayList<StoryItem> storyItems = new ArrayList<>();
+    //**********************************************//
+    private RecyclerView TrainingCourseRecyclerView;
+    private TrainingCourseAdapter CourseAdapter;
+    private ArrayList<TrainingCourseItem> courseItemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,23 +81,37 @@ public class MainActivity extends AppCompatActivity {
 ////////////***************************story setion*****************************//////////////////////////
 
 
-        items.add(new StoryItem(R.drawable.a));
-        items.add(new StoryItem(R.drawable.b));
-        items.add(new StoryItem(R.drawable.c));
-        items.add(new StoryItem(R.drawable.d));
-        items.add(new StoryItem(R.drawable.e));
-        items.add(new StoryItem(R.drawable.a));
-        items.add(new StoryItem(R.drawable.b));
-        items.add(new StoryItem(R.drawable.c));
-        items.add(new StoryItem(R.drawable.d));
-        items.add(new StoryItem(R.drawable.e));
+        storyItems.add(new StoryItem(R.drawable.a));
+        storyItems.add(new StoryItem(R.drawable.b));
+        storyItems.add(new StoryItem(R.drawable.c));
+        storyItems.add(new StoryItem(R.drawable.d));
+        storyItems.add(new StoryItem(R.drawable.e));
+        storyItems.add(new StoryItem(R.drawable.a));
+        storyItems.add(new StoryItem(R.drawable.b));
+        storyItems.add(new StoryItem(R.drawable.c));
+        storyItems.add(new StoryItem(R.drawable.d));
+        storyItems.add(new StoryItem(R.drawable.e));
 
         StoryRecyclerView = (RecyclerView) findViewById(R.id.StoryRecyclerView);
         StoryRecyclerView.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
-        adapter = new StoryItemAdapter(items, MainActivity.this);
+        adapter = new StoryItemAdapter(storyItems, MainActivity.this);
         LinearLayoutManager linearLayoutManagerStoryItems = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
         StoryRecyclerView.setLayoutManager(linearLayoutManagerStoryItems);
         StoryRecyclerView.setAdapter(adapter);
+
+
+
+       //****************************************trainingCourse/////////**********************///////////
+        courseItemList.add(new TrainingCourseItem(R.drawable.a,"قدرت نهفته",240));
+        courseItemList.add(new TrainingCourseItem(R.drawable.b,"قدرت نهفته",240));
+        courseItemList.add(new TrainingCourseItem(R.drawable.c,"قدرت نهفته",240));
+
+        TrainingCourseRecyclerView = (RecyclerView)findViewById(R.id.CourseRecyclerView);
+        TrainingCourseRecyclerView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        CourseAdapter = new TrainingCourseAdapter(courseItemList,MainActivity.this);
+        LinearLayoutManager linearLayoutManagerCourseItems = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false);
+        TrainingCourseRecyclerView.setLayoutManager(linearLayoutManagerCourseItems);
+        TrainingCourseRecyclerView.setAdapter(CourseAdapter);
 
 
         ///////////**********************************************************************////////////////////////////////
